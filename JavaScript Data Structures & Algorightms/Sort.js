@@ -156,3 +156,34 @@ newYearCountDown(10);
 
 
 
+// sorts only work with strings not numbers 
+//so you need to make finction
+
+
+
+
+
+const Comparefunc = ((a, b) =>{
+return a -b;
+
+});
+
+const numbers = [34, 21, 1, 100, 42,-1,23]; 
+
+numbers.sort(Comparefunc);
+console.table(numbers);
+
+
+const proder = [
+    {name: 'lap', price: 100},
+    {name: 'dap', price: 10},
+    {name: 'cap', price: 1004},
+    
+    
+    ];
+
+    proder.sort((a, b)=> {
+        return a.price - b.price;
+   });
+
+console.log(proder);
