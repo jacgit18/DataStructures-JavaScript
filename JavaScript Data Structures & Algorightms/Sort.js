@@ -163,10 +163,13 @@ newYearCountDown(10);
 
 
 
-const Comparefunc = ((a, b) =>{
-return a -b;
+// const Comparefunc = ((a, b) =>{
+// return a -b;
 
-});
+// });
+
+     const Comparefunc = (a, b) =>  a - b;
+
 
 const numbers = [34, 21, 1, 100, 42,-1,23]; 
 
