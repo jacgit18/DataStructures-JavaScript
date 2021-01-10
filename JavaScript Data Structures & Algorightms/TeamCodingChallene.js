@@ -19,7 +19,11 @@ function isOdd(num){
 
 for (let i in nums){
     if(isOdd(nums[i])){
+        
         console.log(nums[i]);
+        continue;
+        console.log(nums[i]);
+
 
     }
 
