@@ -28,3 +28,13 @@ for (let i in nums){
     }
 
 }
+
+// const nums = [-5, -2, 0, 3, 4]
+
+
+// nums.forEach((num,index) =>{
+
+//     let mynum = nums[index];
+//     return mynum.math().min();
+// });
+
