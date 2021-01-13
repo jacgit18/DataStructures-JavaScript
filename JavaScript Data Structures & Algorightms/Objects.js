@@ -1,3 +1,26 @@
+// JavaScript destructuring assignment shorthand syntax
+const rubiksCubeFacts = {
+    possiblePermutations: '43,252,003,274,489,856,000',
+    invented: '1974',
+    largestCube: '17x17x17'
+  };
+  const {possiblePermutations, invented, largestCube} = rubiksCubeFacts;
+  console.log(possiblePermutations); // '43,252,003,274,489,856,000'
+  console.log(invented); // '1974'
+  console.log(largestCube); // '17x17x17'
+
+  console.log('\n');
+
+const activity = 'Surfing';
+const beach = { activity };
+console.log(beach);
+
+console.log('\n');
+
+const activity1 = 'Surfing';
+const beach1 = activity1;
+console.log(beach1);
+
 
 // key value pair
 let user1 = {
@@ -15,6 +38,11 @@ let user1 = {
 };
 
 user1.login1();
+console.log(user1);
+delete user1.age1
+console.log(user1);
+
+
 
 console.log('\n');
 
@@ -54,3 +82,76 @@ let user = {
   
   // console.log(this);
   user.logBlogs();
+
+//   javascript passing objects as arguments
+  const origNum = 8;
+const origObj = {color: 'blue'};
+ 
+const changeItUp = (num, obj) => {
+  num = 7;
+  obj.color = 'red';
+};
+ 
+changeItUp(origNum, origObj);
+ 
+// Will output 8 since integers are passed by value.
+console.log(origNum);
+ 
+// Will output 'red' since objects are passed 
+// by reference and are therefore mutable.
+console.log(origObj.color);
+
+
+// Nested objects
+
+let spaceship = {
+    passengers: [{name: 'Space Dog'}], 
+    telescope: {
+      yearBuilt: 2018,
+      model: "91031-XLT",
+      focalLength: 2032 
+    },
+    crew: {
+      captain: { 
+        name: 'Sandra', 
+        degree: 'Computer Engineering', 
+        encourageTeam() { console.log('We got this!') },
+       'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+    },
+    engine: {
+      model: "Nimbus2000"
+    },
+    nanoelectronics: {
+      computer: {
+        terabytes: 100,
+        monitors: "HD"
+      },
+      'back-up': {
+        battery: "Lithium",
+        terabytes: 50
+      }
+    }
+  }; 
+  
+  let capFave = spaceship.crew.captain['favorite foods'][0];
+  console.log(capFave);
+  
+  let firstPassenger = spaceship.passengers[0];
+  console.log(firstPassenger);
+
+
+  // Pass By Reference
+
+  const spaceship1 = {
+    homePlanet : 'Earth',
+    color : 'silver'
+  };
+   
+  let paintIt = obj => {
+    obj.color = 'glorious gold'
+  };
+   
+  paintIt(spaceship1);
+   
+console.log(spaceship1.color);
+
