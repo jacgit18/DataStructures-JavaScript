@@ -1,9 +1,14 @@
-console.log('Hello');
+class ScopeVar {
 
+     funcOne = () => {
+
+    }
+
+
+}
 const name = "John";
 let myage = 2;
 
-// used back tick under esc key
 console.log(`Hi my name is ${name} im ${myage} years old`);
 // javascroptt jas 3 ways to make
 // a vairiable const, let, and var

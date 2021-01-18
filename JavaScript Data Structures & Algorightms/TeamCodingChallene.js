@@ -38,3 +38,4 @@ for (let i in nums){
 //     return mynum.math().min();
 // });
 
+
