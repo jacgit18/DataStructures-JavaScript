@@ -1,6 +1,9 @@
 
-const testImport = require('./Test2.js');
+// const testImport = require('./Test2.js').default;
+ 
+const testImport = require('./Test2.js'); //other way
 
+// import Test2 from './Test2';
 
 
 class Test1{
