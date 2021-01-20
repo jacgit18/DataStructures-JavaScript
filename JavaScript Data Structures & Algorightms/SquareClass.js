@@ -63,7 +63,7 @@ class Person {
 class Programmer extends Person{
 
     constructor(name, age, yearsOfExp){
-    super(name, age);
+    super(name, age);// bind things from other class
 
     this.yearsOfExp = yearsOfExp;
     }

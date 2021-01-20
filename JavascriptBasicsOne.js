@@ -3,12 +3,22 @@
 */
 const name = "John";
 let myage = 2;
+
+// 'use strict';
 class ScopeVar {
 
     constructor(name, myage){
+        console.log('Class object created');
+
        this.name = name;
        this.myage = myage;
     }
+
+        // this is not a method it is a function which isnt allowed in javascript class only constructor get set and method or aceesor or property
+    // function tester(){
+
+    // }
+    
      /**
       * The var statement declares is scoped to current
       * execution context meaning there scoped to there
@@ -116,97 +126,9 @@ class ScopeVar {
 
 }
 
-let testCall = new ScopeVar();
-testCall.funcOne('Joel', 75);
-testCall.funcSwitch();
 
 
-
-
-for (let i = 0; i < 2; i++){
-    testCall.defaultparam();
-    // find out how to add condition to add param
-
-}
-testCall.defaultparam(4,5);
-
-//console.log(product(12,4));
-// or
-let y = testCall.product(10,2);
-console.log(y);
-
-
-
-
-
-
-const iterable = ['hello', 'world'];
-
-let elem;
-for (elem of iterable) {
-  console.log(elem);
-}
-
-//If you omit all three parts of the head, you get an infinite loop:
-
-//for (;;) {
-  //if (Math.random() === 0) break;
-//}
-// map
-const shoplist = ["fig", "beef", "apple"];
-//const newlistt = shoplist.map(item=> {
-//    return item + " new "; 
-//});// modified array
-//console.log(newlistt);
-
-const newlist = shoplist.map(item => item + " new ");// modified array
-console.log(newlist);
-
-// press f8 to execute file
-
-// constructor function 
-class myshoplist{
-constructor(mystuff, myk){
-    this.mystuff = mystuff;
-    this.myk = myk;
-}
-    saylist() {
-        console.log(`this is my first param ${this.mystuff}  and second param ${this.myk}`);
-    }
-
-}
-
-const mycon = new myshoplist(["hell","no" ], 3);
-console.log(mycon);
-//inheritance
-
-class myshoplist2 extends myshoplist{
-    constructor(mystuff, myk, mymon, mychek){
-        super (mystuff, myk); // bind things from other class
-        this.mymon = mymon;
-        this.mychek = mychek;
-    }
-    
-}
-const mycon2 = new myshoplist2(["drag","ed", "nve"], 2, 32, 1);
-console.log(mycon2);
-mycon2.saylist();
-
-// promise uses async
-
-const prom = new Promise((resolve, reject) => {
-setTimeout(() =>{
-//resolve({user: "ed", pass: "dfvdbdbd"});
-reject(new Error("something wrong"));
-
-}, 2000);
-});
-
-// prom.then(data => {
-// console.log(data);
-// });
-
-prom.then(data => {
-    console.log(data);
-    }).catch(err => console.log(err));
+module.exports.default  = ScopeVar; // older export way
+// you can only export one default
+// export default ScopeVar;
 
