@@ -58,3 +58,11 @@ var foo = {
     b() {}
 };
 
+// object deconstruction
+const list = {
+    myname: "jake",
+    grades: ["B", "A"] 
+};
+
+const { myname, grades } = list;
+console.log(myname, grades); 

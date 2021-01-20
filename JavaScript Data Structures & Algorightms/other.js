@@ -26,3 +26,34 @@ for (const [i, v] of ['a', 'b', 'c'].entries()) {
     console.log(i, v)
   }
   
+
+
+  let i=0;
+ while(i<5){
+   //console.log("number is " + i);
+   i++;
+ }
+
+// or
+
+// do{
+//     console.log("number is " + i)
+//     i++;
+
+// }
+// while(i>5);
+
+//console.log("For loop ");
+
+for(let i =0;i<5;i++) {
+    //console.log("number is " + i);
+
+}
+
+for(i=0;i<50;i++) {
+    //console.log("im sorry " + i);
+
+}
+
+// Basically for each also goodfor going over array once
+// use regular for loop to control specific things

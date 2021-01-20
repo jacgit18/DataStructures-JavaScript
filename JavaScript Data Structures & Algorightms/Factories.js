@@ -49,4 +49,15 @@ console.log('a', "b", `${new String("c")}`);
 console.log(true, false);
 console.log(1, 2, 3, 4);
 
+//object literal
+const getbooks = (title, author) =>{
+  return{
+      title,
+      author
+  };
+}
+
+let book = getbooks("Jokes", "jeff");
+console.log(book);
+
 
