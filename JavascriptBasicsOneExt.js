@@ -1,6 +1,8 @@
 // const testImport = require('./Test2.js').default;
 
 // 'use strict';
+// const assert = require('assert').strict;
+
 const ScopeVar = require('./JavascriptBasicsOne').default;
 let newval = "Hello";
 // import ScopeVar from './JavascriptBasicsOne';

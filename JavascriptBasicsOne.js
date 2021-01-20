@@ -18,7 +18,7 @@ class ScopeVar {
     // function tester(){
 
     // }
-    
+
      /**
       * The var statement declares is scoped to current
       * execution context meaning there scoped to there
