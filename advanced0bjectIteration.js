@@ -50,7 +50,7 @@ for (let crewMember in spaceship.crew) {
 // };
 
 // the shorthand
-var foo = {x, y, z};
+// var foo = {x, y, z};
 
 // methods
 var foo = {
@@ -65,4 +65,8 @@ const list = {
 };
 
 const { myname, grades } = list;
-console.log(myname, grades); 
+
+// for (myname of grades) {
+    console.log(myname, grades); 
+// }
+

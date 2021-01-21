@@ -8,17 +8,7 @@ const thelistofEach = ["mile", "cow", "kay"];
 //console.log(shoplist);
 
 
-// figure out
-const fordecon = {
-    count: 0,
-    shoplist: ["fig", "beef", "apple"] 
-};
 
-const { count, shoplist } = fordecon;
-
-for (count of shoplist) {
-  console.log(shoplist[count]);
-}
 
 
 // deconstruction used here

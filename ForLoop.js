@@ -109,3 +109,11 @@ console.timeEnd('for-in');
 
 
 
+const thelistofEach = ["mile", "cow", "kay"];
+  thelistofEach.forEach((item, index) => {
+      console.log(index, item);
+  }); // how to do with for of
+
+//const shoplist = ["fig", "beef", "apple"];
+//shoplist.push("drink");
+//console.log(shoplist);
