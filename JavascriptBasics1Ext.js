@@ -1,12 +1,9 @@
-// const testImport = require('./Test2.js').default;
-
-// 'use strict';
-// const assert = require('assert').strict;
 
 const ScopeVar = require('./JavascriptBasics1');
-// const ScopeVar = require('./JavascriptBasicsOne').default;
 
 let newval = "Hello";
+// const ScopeVar = require('./JavascriptBasicsOne').default;
+
 // import ScopeVar from './JavascriptBasicsOne';
 
 // overide Scopevar method
@@ -32,6 +29,7 @@ class BasicOne extends ScopeVar{
     }
 
     // still prints out original for some reason
+    // @ts-check
     funcOne(name, myage) {
         super.funcOne(name, myage);
         // why isnt this called right after
