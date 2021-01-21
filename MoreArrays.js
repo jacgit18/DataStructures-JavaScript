@@ -125,3 +125,35 @@ console.log('\n');
 //  where the item was found
 let fruit = ['apple', 'orange', false, 3, 'apple']
 console.table(fruit.lastIndexOf('apple'));
+
+
+console.log('\n');
+// multi dimensional array
+let grades = [
+    [12,13,32,43,42,23],
+    [2,3,2,4,52,56],
+    [122,153,92,83,72,33]
+
+
+
+];
+
+
+// for (let i = 0; i <grades.length; i++){
+//     // console.log(grades[i]);// gives you rows
+//     for (let k = 0; k < grades[i].length; k++){
+//         console.log(grades[i][k]);
+
+//     }
+// console.log('------------')
+
+   
+// }
+
+grades.forEach((row) => {
+    // console.log(row);
+    row.forEach((col) =>{
+        console.log(col);
+    });
+    console.log('------------')
+});

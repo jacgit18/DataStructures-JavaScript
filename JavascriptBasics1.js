@@ -1,4 +1,4 @@
-/**  javascroptt jas 3 ways to make a vairiable const, let, and var which 
+/**  javascroptt has 3 ways to make a vairiable const, let, and var which 
  * is the orignal then const and let came out let isnt really used in mobile browsers may change
 */
 const name = "John";
@@ -14,10 +14,6 @@ class ScopeVar {
        this.myage = myage;
     }
 
-        // this is not a method it is a function which isnt allowed in javascript class only constructor get set and method or aceesor or property
-    // function tester(){
-
-    // }
 
      /**
       * The var statement declares is scoped to current
@@ -28,7 +24,9 @@ class ScopeVar {
       * otherwise it,s global. it can be reasign whenever and 
       * intialized with or without value and can be redeclared at any point
       */
-     funcOne = (name, myage) => {
+    //  funcOne = (name, myage) => {
+        funcOne(name, myage) {
+
         console.log(`Hi my name is ${name} im ${myage} years old`);
     
         
@@ -121,6 +119,9 @@ class ScopeVar {
         isCorrect ? console.log('Correct!') : console.log('Incorrect!');
     }
 
+    mySupercall(){
+        console.log("Original class");
+    }
 
 
 
@@ -128,7 +129,9 @@ class ScopeVar {
 
 
 
-module.exports.default  = ScopeVar; // older export way
+module.exports  = ScopeVar; // older export way
+// module.exports.default  = ScopeVar; 
+
 // you can only export one default
 // export default ScopeVar;
 
