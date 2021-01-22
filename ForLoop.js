@@ -31,6 +31,22 @@ for(let i = 0; i < pet.length; i++){
 }
 console.log('\n')
 
+/**
+ * The forEach method exists within all arrays. In our case,
+ * foodArray is an array that inherits all of the various methods 
+ * from Array.prototype. For the forEach method, we pass in a function 
+ * that will be executed in each iteration.
+ * 
+ * The good thing about forEach is that the callback function within it allows 
+ * you to keep that variable within the forEach’s scope. If you’ve assigned a variable
+ *  outside and re-use it within the forEach, the outside variable retains its value.
+ * 
+ * When using the forEach method, you’re calling on the Array.prototype method in relation 
+ * to the array directly. When you use a for loop, you have to set up a variable to increment 
+ * (i), a condition to follow, and the actual increment itself.
+ * 
+ * you cant break out of for each
+ */
 
 // for each takes a call back function as parameter
 pet.forEach((pet, index) =>{
@@ -117,3 +133,10 @@ const thelistofEach = ["mile", "cow", "kay"];
 //const shoplist = ["fig", "beef", "apple"];
 //shoplist.push("drink");
 //console.log(shoplist);
+
+// does at least once before checking condition
+do {
+    text += "The number is " + i;
+    i++;
+  }
+  while (i < 10);

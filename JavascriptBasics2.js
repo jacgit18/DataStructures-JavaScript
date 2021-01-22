@@ -50,5 +50,6 @@ pracHolder2.funcOne('timmy', 797);
 // even they dont exist in the original this doesnt happen when OG is the only thing imported
 
 
-
-
+////////////////////////
+// Proably not understanding about poloymorphism
+///////////////////////////
