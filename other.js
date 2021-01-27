@@ -93,3 +93,11 @@ console.log(newlist);
 
 
 
+const debugLogger = ((x) =>{
+  
+  console.log(`${x}`);
+});
+
+let my = "Hello"
+
+debugLogger("hfhft");
