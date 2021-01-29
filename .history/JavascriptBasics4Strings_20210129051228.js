@@ -137,8 +137,11 @@ class MyString {
 
   MysubstringStarter = () => {
     var text = "excellent";
-    text.substring(0, 4);
-    text.substring(2, 4);
+    console.log(text.substring(0, 4));  
+    console.log(text.substring(2, 4));
+    console.log(text.substring(2));// second param optional excludes everything before 3rd index
+ 
+
   };
 
   MysubstringFrom = () => {
@@ -161,16 +164,16 @@ class MyString {
 }
 
 const stringer = new MyString();
-stringer.MycharAt();
-stringer.MycharCodeAt();
-stringer.Myconcate();
-stringer.MyfromCharCode();
-stringer.MylastIndexOf();
-stringer.Mymatch();
-stringer.MystringSearch();
-stringer.Myslice();
+// stringer.MycharAt();
+// stringer.MycharCodeAt();
+// stringer.Myconcate();
+// stringer.MyfromCharCode();
+// stringer.MylastIndexOf();
+// stringer.Mymatch();
+// stringer.MystringSearch();
+// stringer.Myslice();
 // stringer.Mysplit();
-// stringer.MysubstringStarter();
+stringer.MysubstringStarter();
 // stringer.MysubstringFrom();
 // stringer.Myconcate();
 // stringer.Mylowcase();
