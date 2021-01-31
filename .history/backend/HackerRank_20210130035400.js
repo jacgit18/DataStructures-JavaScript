@@ -1,8 +1,14 @@
 // function minimumStepsToOne(num) {
+//     // 
     
 //     num === 1 ? console.log(num) 
 //     : num < Math.min(num) ? console.log( num - 1) : minimumStepsToOne(num -1); 
-  
+    
+ 
+    
+    
+    
+
 // }
 
 
