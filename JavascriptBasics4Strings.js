@@ -23,6 +23,22 @@ class MyString {
     console.log(message.charAt(1));
   };
 
+  MyendCheck = () => {
+    var message = "hello what is up! ";
+    console.log(`${message} is ${message.endsWith("")} because empty space at end `);   
+    console.log(`${message} is ${message.endsWith()} because empty param `);   
+    console.log(`${message} is ${message.endsWith("s")} because the string dosent ends with s `); 
+    console.log(`${message} is ${message.endsWith("s",13)} because we specified location of s `);   
+  
+    console.log(`${message} is ${message.endsWith("!")} because the string ends with space `);   
+
+    
+    var message2 = "hello what is up!";
+    console.log(`${message2} is ${message2.endsWith("!")} because the string ends with !`);   
+
+
+  };
+
   // concat()	Joins two or more strings, and returns a new joined strings
   Myconcate = () => {
     var message = "Sam";
@@ -32,7 +48,7 @@ class MyString {
 
   // fromCharCode()	Converts Unicode values to characters
   MyfromCharCode = () => {
-    console.log(String.fromCharCode(97, 98, 99, 120, 121, 122));
+    console.log(String.fromCharCode(97, 98, 99, 120, 121, 122, 72));
     console.log(String.fromCharCode(72, 69, 76, 76, 79));
   };
 
@@ -82,6 +98,8 @@ class MyString {
     var myInt = myString.match(intRegex);
     console.log(myInt);
   };
+
+   
 
   /**
    * replace(regexp/substr, replacetext) Searches and replaces
@@ -164,12 +182,20 @@ class MyString {
 }
 
 const stringer = new MyString();
-stringer.MycharAt();
-stringer.MycharCodeAt();
-stringer.Myconcate();
+// stringer.MycharAt();
+// stringer.MycharCodeAt();
+// stringer.MyendCheck();
+// stringer.Myconcate();
 stringer.MyfromCharCode();
 stringer.MylastIndexOf();
 stringer.Mymatch();
+
+// let sentence = "This is the BEST";
+// sentence.matchAll("e").forEach((ele) => {
+//   console.log(ele);
+// });
+
+
 stringer.MystringSearch();
 stringer.Myslice();
 stringer.Mysplit();

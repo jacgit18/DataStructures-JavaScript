@@ -80,6 +80,9 @@ let atLeastOnePositive = num.some((value) => {
 // it checks if the array contains a specific item.
 let usersCheck = ['paddy', 'zaddy', 'faddy', 'baddy'];
 usersCheck.includes('baddy'); 
+let includeIndx = "Dogs are the best";
+console.log(`Dog is ${includeIndx.includes("Dog")}`);
+console.log(`Dog is ${includeIndx.includes("Dog", 1)} were starting at index 1 so og not Dog`);
 
 console.log('\n');
 
@@ -117,6 +120,10 @@ console.table(fruits.indexOf('orange'));
 console.table(fruits.indexOf(5));
 console.table(fruits.indexOf(null)); // means doesnt exist 
 console.table(fruits.indexOf(true)); // means doesnt exist 
+console.log(`index tester ${"test one two test".indexOf("test")}`);
+console.log(`next index tester ${"test one two test".indexOf("one")} which is were the index of one starts`);
+console.log(`last index tester ${"test one two test".indexOf("test", 1)} starts looking for test after first index`);
+
 console.log('\n');
 
 
@@ -125,6 +132,8 @@ console.log('\n');
 //  where the item was found
 let fruit = ['apple', 'orange', false, 3, 'apple']
 console.table(fruit.lastIndexOf('apple'));
+console.log(`last index of string is ${"test one two test".lastIndexOf("test")} which is the start of second test`);
+console.log(`last index of string is ${"test one two test".lastIndexOf("test", 12)} this starts at 12 and goes backwards to first test`);
 
 
 console.log('\n');
