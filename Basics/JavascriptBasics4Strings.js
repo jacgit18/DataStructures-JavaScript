@@ -2,7 +2,6 @@ class MyString {
   // endsWith()	Checks whether a string ends with specified string/characters
   // includes()	Checks whether a string contains the specified string/characters
   // localeCompare()	Compares two strings in the current locale
-  // repeat()	Returns a new string with a specified number of copies of an existing string
   // startsWith()	Checks whether a string begins with specified characters
   // substr()	Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
   // toLocaleLowerCase()	Converts a string to lowercase letters, according to the host's locale
@@ -25,18 +24,32 @@ class MyString {
 
   MyendCheck = () => {
     var message = "hello what is up! ";
-    console.log(`${message} is ${message.endsWith("")} because empty space at end `);   
-    console.log(`${message} is ${message.endsWith()} because empty param `);   
-    console.log(`${message} is ${message.endsWith("s")} because the string dosent ends with s `); 
-    console.log(`${message} is ${message.endsWith("s",13)} because we specified location of s `);   
-  
-    console.log(`${message} is ${message.endsWith("!")} because the string ends with space `);   
+    console.log(
+      `${message} is ${message.endsWith("")} because empty space at end `
+    );
+    console.log(`${message} is ${message.endsWith()} because empty param `);
+    console.log(
+      `${message} is ${message.endsWith(
+        "s"
+      )} because the string dosent ends with s `
+    );
+    console.log(
+      `${message} is ${message.endsWith(
+        "s",
+        13
+      )} because we specified location of s `
+    );
 
-    
+    console.log(
+      `${message} is ${message.endsWith(
+        "!"
+      )} because the string ends with space `
+    );
+
     var message2 = "hello what is up!";
-    console.log(`${message2} is ${message2.endsWith("!")} because the string ends with !`);   
-
-
+    console.log(
+      `${message2} is ${message2.endsWith("!")} because the string ends with !`
+    );
   };
 
   // concat()	Joins two or more strings, and returns a new joined strings
@@ -92,29 +105,23 @@ class MyString {
     var intRegex = /[0-9 -()+]+$/;
     var myNumber = "999";
     var myInt = myNumber.match(intRegex);
-    console.log(myInt);
-
-    var myString = "999 JS Coders";
-    var myInt = myString.match(intRegex);
-    console.log(myInt);
-  };
-
    
+  };
 
   /**
-   * replace(regexp/substr, replacetext) Searches and replaces
-   * the regular expression (or sub string) portion
-   * (match) with the replaced text instead.
    *
-   *  replace()	Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
    */
-  Myreplace = () => {
-    var myString = "999 JavaScript Coders";
-    console.log(myString.replace(/JavaScript/i, "jQuery"));
+  Mynormalize = () => {
+    // unicode conversion
+    var totn_string1 = "caf\u00E9";
+    var totn_string2 = "cafe\u0301";
 
-    var myString = "999 JavaScript Coders";
-    console.log(myString.replace(new RegExp("999", "gi"), "The"));
+    console.log(totn_string1);
+    console.log(totn_string2);
+    console.log(totn_string1 === totn_string2);
   };
+
+
 
   /**
    *   search() Searches a string for a specified value, or regular expression, and returns the position of the match
@@ -149,17 +156,24 @@ class MyString {
     //word[1] contains "lcome to jQuery4u"
     var word = message.split("l");
     console.log(word);
+
+    console.log("Hello Darkness my old friend".split("")) // splits at spaces
+    console.log("Hello Darkness my old friend".split("", 2)) 
+    console.log("Hello Darkness my old friend".split(" ")) 
+    console.log("Hello Darkness my old friend".split()) 
+
+    console.log("Hello Darkness my old friend".split(" ", 2)) 
+
+
   };
 
   // substring()	Extracts the characters from a string, between two specified indices
 
   MysubstringStarter = () => {
     var text = "excellent";
-    console.log(text.substring(0, 4));  
+    console.log(text.substring(0, 4));
     console.log(text.substring(2, 4));
-    console.log(text.substring(2));// second param optional excludes everything before 3rd index
- 
-
+    console.log(text.substring(2)); // second param optional excludes everything before 3rd index
   };
 
   MysubstringFrom = () => {
@@ -195,7 +209,6 @@ stringer.Mymatch();
 //   console.log(ele);
 // });
 
-
 stringer.MystringSearch();
 stringer.Myslice();
 stringer.Mysplit();
@@ -204,3 +217,51 @@ stringer.MysubstringFrom();
 stringer.Myconcate();
 stringer.Mylowcase();
 stringer.Myupcase();
+stringer.Mynormalize();
+  // repeat()	Returns a new string with a specified number of copies of an existing string
+
+console.log("HI".repeat(4));
+
+  /**
+   * replace(regexp/substr, replacetext) Searches and replaces
+   * the regular expression (or sub string) portion
+   * (match) with the replaced text instead.
+   *
+   *  replace()	Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
+   */
+
+var myString = "999 JavaScript Coders";
+console.log(myString.replace(/JavaScript/i, "jQuery"));
+
+var myString = "999 JavaScript Coders";
+console.log(myString.replace(new RegExp("999", "gi"), "The"));
+
+// console.log("cat cat dog".replaceAll("cat", "bird")); // Throws error
+const p = 'cat cat cat dog';
+
+const regex = /cat/gi;
+
+console.log(p.replace(regex, 'bird')); // when using regex you need to use global for replaceall
+
+
+console.log("hello".startsWith("e"))
+console.log("hello".startsWith("e", 1)) // picked index
+console.log(" get rid of white space        ".trim())
+console.log(" get rid of white space        ".trimEnd())
+console.log(" get rid of white space        ".trimStart())
+
+
+let str = '1234'.padStart(8,'0');
+console.log(str); // "00001234"
+
+let str2 = 'abc'.padStart(5, "*");
+console.log(str2); // pads by spaces
+
+let str3 = 'abc'.padEnd(5, "*");
+console.log(str3); 
+
+let str4 = 'abc'.padEnd(5,'def');
+console.log(str4); // f is left of because we stop a 5
+
+str4 = 'abc'.padEnd(6,'def');
+console.log(str4); 

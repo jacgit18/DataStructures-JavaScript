@@ -1,6 +1,11 @@
+const ConLoggerFuncParamOne = require('./ConLoggerFUnc');
+  
+
 const thelistofEach = ["mile", "cow", "kay"];
   thelistofEach.forEach((item, index) => {
-      console.log(index, item);
+      // console.log(index, item);
+      ConLoggerFuncParamOne.ConsoleDebuggerParamTwo(`The Index ` + index, item);
+
   }); // how to do with for of
 
 //const shoplist = ["fig", "beef", "apple"];
@@ -93,11 +98,5 @@ console.log(newlist);
 
 
 
-const debugLogger = ((x) =>{
-  
-  console.log(`${x}`);
-});
 
-let my = "Hello"
 
-debugLogger("hfhft");
