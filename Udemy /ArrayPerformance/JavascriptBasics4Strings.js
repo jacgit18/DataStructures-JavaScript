@@ -6,7 +6,6 @@ class MyString {
   // substr()	Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
   // toLocaleLowerCase()	Converts a string to lowercase letters, according to the host's locale
   // toLocaleUpperCase()	Converts a string to uppercase letters, according to the host's locale
-  // toString()	Returns the value of a String object
   // trim()	Removes whitespace from both ends of a string
   // valueOf()	Returns the primitive value of a String object
 

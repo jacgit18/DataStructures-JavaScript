@@ -1,12 +1,38 @@
- module.exports.ConsoleDebuggerParamOne = (x) => {
-    console.log(x);
+class ConsoleObj {
+
+    ConsoleDebuggerSpacer = () => {
+        console.log(`\n`);
+    
+    
+    }
+
+
+ConsoleDebuggerParamOne = (x) => {
+    console.log(`${x}`);
 
 
 }
 
-module.exports.ConsoleDebuggerParamTwo = (x, y) => {
-    console.log(x, y);
-    // console.log(`${x} ${y}`);
+ConsoleDebuggerParamTwo = (x, y) => {
+    // console.log(x, y);
+    console.log(`${x} ${y}`);
+
+
+}
+
+ConsoleDebuggerParamThree = (x, y, z) => {
+    // console.log(x, y);
+    console.log(`${x} ${y} ${z}`);
+
+
+}
+
+ConsoleDebuggerParamFour = (x, y, z, a) => {
+    // console.log(x, y);
+    console.log(`${x} ${y} ${z} ${a}`);
+
+
+}
 
 
 }
@@ -16,4 +42,4 @@ module.exports.ConsoleDebuggerParamTwo = (x, y) => {
 // const ConLoggerFuncParamOne = require('./ConLoggerFUnc');
 
 
-// module.exports = ConsoleDebugger();
+module.exports = ConsoleObj;
