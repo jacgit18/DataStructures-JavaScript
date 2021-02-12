@@ -13,6 +13,14 @@ ConsoleDebuggerParamOne = (x) => {
 
 }
 
+
+
+ConsoleDebuggerParamOneLinkList = (x) => {
+    console.log(x);
+
+
+}
+
 ConsoleDebuggerParamTwo = (x, y) => {
     // console.log(x, y);
     console.log(`${x} ${y}`);
