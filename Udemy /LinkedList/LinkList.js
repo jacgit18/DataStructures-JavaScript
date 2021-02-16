@@ -94,12 +94,13 @@ class LinkedList {
     return currentNode;
   };
 
-  delete = (index, value) => {
-    const newNode = new Node(value);
-    newNode.next = this.head;
-    this.head = newNode;
-    this._length++;
-    return this;
+  delete = (index) => {    
+    // Check Parameters with conditional statement      
+    const leader = this.traverseToIndex(index-1);
+    const unwantedNode = leader.next;
+    leader.next = unwantedNode.next;
+    this.length--;
+    return this.printList();
   };
 }
 
@@ -109,7 +110,7 @@ mylinkList.append("our own");
 mylinkList.append("LinkList");
 mylinkList.prepend("In javascript");
 mylinkList.insert(2, 99);
-// mylinkList.delete();
+mylinkList.delete(2);
 
 // mylinkList.printList();
 
