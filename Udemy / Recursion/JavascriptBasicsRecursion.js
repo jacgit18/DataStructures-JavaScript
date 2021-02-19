@@ -8,14 +8,13 @@
         let doThis = console.log(`if(?) my condition ${mycondition} print this`);
         let doThat = console.log(`if(?) my condition ${nextcondition} greater than do this`);
 
-
-        // this is basically the same
+        // regular if else
         if(mycondition){
             doThis
         }else if(nextconditiom >0 && otherCondition > 0 ){
             doThat
         }else {
-            recursionRecallMethod();
+           return recursionRecallMethod(); 
         }
 
        let mycondition1 = false;
@@ -23,7 +22,7 @@
         let otherCondition1 = 5;
 
         
-        // base case 
+        // base case with ternary operator if else
        return mycondition1 ? console.log(`if(?) my condition ${mycondition1} print this`)
         : nextcondition1 > 0 && otherCondition1 > 0 ? console.log(`if(?) my condition ${nextcondition1} greater than do this`)
         // : nextcondition > 0 ? doThat
@@ -48,7 +47,7 @@ const factorial = (n) => {
 
 console.time('recTime');
 
-console.log(factorial(10));
+console.log(factorial(5));
 
 console.timeEnd("recTime");
 
@@ -83,8 +82,30 @@ const iterativeTime = (n) => {
 console.log('\n');
 console.time('iterativeTime');
 
-console.log(iterativeTime(10));
+console.log(iterativeTime(5));
 
 console.timeEnd("iterativeTime");
 
+let count = 0;
+const inception = ()=>{
+    console.log(count);
+    if(count >3){
+        return "done"; // when condition is met which at the 4th call each call will be popped off the call stack
+        // but the done will also be popped off and return undifined becuase it statys at the last call of the method
+    }
+    count++;
+    // inception();
+    return inception(); // so alway return the call so when the call is popped from the stack your value is bubbling up 
+    // to the top or last call of the method on the call stack basiclly passing off the value to next call of the method 
 
+}
+
+inception();
+
+// rules of recursion:
+
+// identify base case 
+
+// identify recursive case
+
+// then as we reach the base case condition return the value and return the recursive call
