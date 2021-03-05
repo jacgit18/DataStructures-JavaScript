@@ -11,3 +11,14 @@ for(let i = 0; i< SimpArray.length; i++){
 }
 console.log(mysum)
 
+
+
+// find out how to return just sum 
+// SimpArray.forEach((item, index) => {
+//     mysum += SimpArray[index] 
+
+//     return console.log(mysum)
+
+// }); 
+
+

@@ -50,7 +50,7 @@ console.log('\n')
 
 // for each takes a call back function as parameter
 pet.forEach((pet, index) =>{
-console.log(pet);
+console.log("my pet " + pet);
  // dont need to added [index] to get value once in clean format
  // foreach only works with arrays species is a object so it wont show also mammal is considered as a key and isnt a interger
 }
