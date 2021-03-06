@@ -1,24 +1,46 @@
 "use strict";
 
-var SimpArray = [[3], [11, 2, 4], [4, 5, 6], [10, 8, -12]]; // nested array is basicallly  a multi dimensional array
+// let SimpArray = [ 
+//     [3], 
+//     [ 11, 2, 4 ], 
+//     [ 4, 5, 6 ], 
+//     [ 10, 8, -12 ] 
+// ]
+// nested array is basicallly  a multi dimensional array
 // console.log(TheArray);
+// let LeftToRight = 0;
+// let RightToLeft = 0;
+// let rows = SimpArray.length;
+// let col = SimpArray[0].length;
+// let i = 0;
+// let j = 0;
+// let k = 0;
+// let l = SimpArray.length - 1;
+// while (i < rows && j < col && k < rows && l >= 0){
+//     LeftToRight += SimpArray[i][j];
+//     RightToLeft += SimpArray[k][l];
+//     i++;
+//     j++;
+//     k++;
+//     l--;
+// }
+//   console.log(Math.abs(LeftToRight - RightToLeft));
+var SimpArray = [[3], [11, 2, 4], [4, 5, 6], [10, 8, -12]];
 
-var LeftToRight = 0;
-var RightToLeft = 0;
-var rows = SimpArray.length;
-var col = SimpArray[0].length;
-var i = 0;
-var j = 0;
-var k = 0;
-var l = SimpArray.length - 1;
+var diagDiff = function diagDiff(matrix) {
+  var length = matrix.length;
+  var sum1 = 0;
+  var sum2 = 0;
 
-while (i < rows && j < col && k < rows && l >= 0) {
-  LeftToRight += SimpArray[i][j];
-  RightToLeft += SimpArray[k][l];
-  i++;
-  j++;
-  k++;
-  l--;
-}
+  for (var i = 0; i < matrix.length; i++) {
+    // if(TheArray[i].length <= 1 ){
+    // if(TheArray[i].length !== 1 ){
+    sum1 += matrix[i][i];
+    sum2 += matrix[length - 1 - i][i];
+  } // }
 
-console.log(Math.abs(LeftToRight - RightToLeft));
+
+  console.log(Math.abs(sum1 - sum2));
+};
+
+diagDiff(SimpArray);
