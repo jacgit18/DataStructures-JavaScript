@@ -1,5 +1,10 @@
 // Construct Single Node
 class Node {
+  /**
+   * 
+   * @param {*} data 
+   * @param {*} next 
+   */
     constructor(data, next = null) {
       this.data = data;
       this.next = next;
