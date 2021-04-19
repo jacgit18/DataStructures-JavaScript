@@ -19,12 +19,12 @@ bold ialic
 <!-- samhing can b done wih image -->
 [link](google.com "hover name")
 
-[i]: [google.com/](https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjFlO6awYrwAhUihOAKHcJgBHgQPAgI) 
+[google.com]: (https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjFlO6awYrwAhUihOAKHcJgBHgQPAgI) 
 
 
 ### Unordered List
 ---
-* [Reuse link][i]
+* [Reuse link][google.com]
 * da
   * fka
   * dad
