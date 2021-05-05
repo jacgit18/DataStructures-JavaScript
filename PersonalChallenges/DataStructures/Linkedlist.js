@@ -139,19 +139,19 @@ class Node {
   
   const ll = new LinkedList();
   
-  ll.insertFirst(100);
-  ll.insertFirst(200);
-  ll.insertFirst(300);
-  ll.insertLast(400);
-  ll.insertAt(500, 3);
+  // ll.insertFirst(100);
+  // ll.insertFirst(200);
+  // ll.insertFirst(300);
+  // ll.insertLast(400);
+  // ll.insertAt(500, 3);
   
   // ll.clearList();
   // ll.getAt(2);
   
-  ll.printListData();
+  // ll.printListData();
 
-  ll.removeAt(300);
-  ll.printListData();
-  console.log(ll)
+  // ll.removeAt(300);
+  // ll.printListData();
+  // console.log(ll)
 
   
