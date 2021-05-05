@@ -157,17 +157,17 @@ function () {
   return LinkedList;
 }();
 
-module.exports = LinkedList; // older export way
-
 var ll = new LinkedList();
 ll.insertFirst(100);
 ll.insertFirst(200);
 ll.insertFirst(300);
 ll.insertLast(400);
-ll.insertAt(500, 3); // ll.clearList();
+ll.insertAt(500, 2); // ll.clearList();
 // ll.getAt(2);
 
 ll.printListData();
+console.log("");
 ll.removeAt(300);
+console.log("");
 ll.printListData();
 console.log(ll);

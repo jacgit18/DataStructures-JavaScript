@@ -135,7 +135,6 @@ class Node {
         }
       }
     }
-    module.exports  = LinkedList; // older export way
     
     const ll = new LinkedList();
     
@@ -143,14 +142,17 @@ class Node {
     ll.insertFirst(200);
     ll.insertFirst(300);
     ll.insertLast(400);
-    ll.insertAt(500, 3);
+    ll.insertAt(500, 2);
     
     // ll.clearList();
     // ll.getAt(2);
     
     ll.printListData();
-  
+    console.log("")
+
     ll.removeAt(300);
+    console.log("")
+
     ll.printListData();
     console.log(ll)
   
