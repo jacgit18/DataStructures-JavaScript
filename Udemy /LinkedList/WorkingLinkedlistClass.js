@@ -45,16 +45,6 @@ class LinkedList {
     this.length--
   }
 
-  removeDuplicates(index) {
-    if (index === 0) return this.removeHead()
-
-    const prev = this.getByIndex(index - 1)
-    if (prev == null) return null
-
-    prev.next = prev.next.next
-    this.length--
-  }
-
   print() {
     let output = ''
     let current = this.head
