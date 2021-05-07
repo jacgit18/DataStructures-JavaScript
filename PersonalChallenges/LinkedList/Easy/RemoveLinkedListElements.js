@@ -7,8 +7,6 @@ const LinkedList = require("../../../PersonalChallenges/DataStructures/Linkedlis
 
 const myLK = new LinkedList();
 
-
-
 const ListFiller = () => {
   myLK.insertAtHead(6);
   myLK.insertAtHead(5);
@@ -19,55 +17,53 @@ const ListFiller = () => {
   myLK.insertAtHead(1);
 
   myLK.print();
-
 };
 
-ListFiller();
 
 let head = myLK.head;
 let val = 6;
 
-const removeElements = (head, val) => {
-  console.log(head);
-  console.log(val);
-  let numbers = new Set();
+// const removeElements = (head, val) => {
+//   console.log(head);
+//   console.log(val);
+//   let numbers = new Set();
 
-  for (let num in head) {
-    if (!numbers.has(num)) {
-      // adding numbers not in set from given array
-      console.log(myLK.removeAtIndex(numbers.add(num)));
+//   for (let num in head) {
+//     if (!numbers.has(num)) {
+//       // adding numbers not in set from given array
+//       console.log(myLK.removeAtIndex(numbers.add(num)));
+//     } else {
+//       return true;
+//     }
+//   }
+//   return false;
+
+// };
+
+// removeElements(head, val);
+// myLK.print();
+
+const removeDuplicateElements = function (head, val) {
+  if (head === null) {
+    return null;
+  }
+
+  let currentNode = LinkedList(-1);
+  console.log(currentNode);
+
+
+  currentNode.next = head;
+  head = currentNode;
+
+  while (currentNode.next !== null) {
+    if (currentNode.next.val === val) {
+      currentNode.next = currentNode.next.next;
     } else {
-      return true;
+      currentNode = currentNode.next;
     }
   }
-  return false;
 
+  return head.next;
 };
 
-removeElements(head, val);
-myLK.print();
-
-/**
- * @param {ListNode} head
- * @param {number} val
- * @return {ListNode}
- */
- var removeElements = function(head, val) {
-    if (head === null) {
-        return null;
-    }
-    
-    let currentNode = new ListNode(-1);
-    currentNode.next = head;
-    head = currentNode;
-    
-    while (currentNode.next !== null) {
-        if (currentNode.next.val === val) {
-            currentNode.next = currentNode.next.next;
-        } else {
-            currentNode = currentNode.next;
-        }
-    }
-    
-    return head.next;
-};
+removeDuplicateElements(head, val);

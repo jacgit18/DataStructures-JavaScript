@@ -20,26 +20,43 @@ var ListFiller = function ListFiller() {
   myLK.print();
 };
 
-ListFiller();
 var head = myLK.head;
-var val = 6;
+var val = 6; // const removeElements = (head, val) => {
+//   console.log(head);
+//   console.log(val);
+//   let numbers = new Set();
+//   for (let num in head) {
+//     if (!numbers.has(num)) {
+//       // adding numbers not in set from given array
+//       console.log(myLK.removeAtIndex(numbers.add(num)));
+//     } else {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+// removeElements(head, val);
+// myLK.print();
 
-var removeElements = function removeElements(head, val) {
-  console.log(head);
-  console.log(val);
-  var numbers = new Set();
+var removeDuplicateElements = function removeDuplicateElements(head, val) {
+  if (head === null) {
+    return null;
+  }
 
-  for (var num in head) {
-    if (!numbers.has(num)) {
-      // adding numbers not in set from given array
-      console.log(myLK.removeAtIndex(numbers.add(num)));
+  var currentNode = LinkedList(-1);
+  console.log(currentNode);
+  currentNode.next = head;
+  head = currentNode;
+
+  while (currentNode.next !== null) {
+    if (currentNode.next.val === val) {
+      currentNode.next = currentNode.next.next;
     } else {
-      return true;
+      currentNode = currentNode.next;
     }
   }
 
-  return false;
+  return head.next;
 };
 
-removeElements(head, val);
-myLK.print();
+removeDuplicateElements(head, val);
