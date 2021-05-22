@@ -2,6 +2,7 @@ console.log("z".charCodeAt(0))
 let num = 65;
 console.log(String.fromCharCode(num))
 console.log(String.fromCodePoint(65, 122))
+// 127 to 160 blanks
 
 
 
