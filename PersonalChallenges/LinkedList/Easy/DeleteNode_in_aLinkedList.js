@@ -42,3 +42,9 @@ var deleteNode = function (node) {
 };
 
 // deleteNode(node);
+
+let age = 0;
+
+const test = prompt('enter something'); 
+
+console.log(test)
