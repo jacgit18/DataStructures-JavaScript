@@ -30,6 +30,7 @@ class HashTable {
     // this.data = [];
   }
 
+  // hash function allocates were key is in memory
   _hash(key) {
     let hash = 0;
     for (let i = 0; i < key.length; i++) {
@@ -68,7 +69,7 @@ class HashTable {
   //         keysArray.push(this.data[i][0][0])
   //       }
   //     }
-  //     return keysArray;
+  //     return keysArray; // will be unordered
   //   }
 
   // collision version
@@ -94,8 +95,8 @@ class HashTable {
     return result;
   }
 }
-
-const myHashTable = new HashTable(50);
+// passing 25 to constructor with array 
+const myHashTable = new HashTable(25);
 console.log(myHashTable.set("grapes", 10000));
 console.log(myHashTable.set("pear", 4));
 
