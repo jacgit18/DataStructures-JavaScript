@@ -37,14 +37,14 @@ function () {
         return;
       } else {
         var searchTree = function searchTree(node) {
-          if (data < node.data) {
+          if (data <= node.data) {
             if (node.left === null) {
               node.left = new Node(data);
               return;
             } else if (node.left !== null) {
               return searchTree(node.left);
             }
-          } else if (data > node.data) {
+          } else if (data >= node.data) {
             if (node.right === null) {
               node.right = new Node(data);
               return;
