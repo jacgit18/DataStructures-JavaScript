@@ -47,7 +47,8 @@ var twoSum = function twoSum(nums, target) {
   // key and value in Map can be in any data type, not limited to only string or integer.
 
   for (var i = 0; i < nums.length; i++) {
-    var complement = target - nums[i]; // has checks if key is in map you can delete and clear and gt size
+    var complement = target - nums[i]; // return when target 
+    // has checks if key is in map you can delete and clear and gt size
 
     if (map.has(complement)) {
       return [map.get(complement), i];
@@ -57,7 +58,7 @@ var twoSum = function twoSum(nums, target) {
   }
 };
 
-console.log(twoSum(Mynum, Mytarget)); //ways to itrate map 
+console.log(twoSum([1, 2, 3, 4, 6], 6)); //ways to itrate map 
 
 var map = new Map(); //Empty Map
 

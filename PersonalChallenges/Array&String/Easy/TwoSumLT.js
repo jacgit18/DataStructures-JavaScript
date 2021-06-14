@@ -65,7 +65,7 @@ var twoSum = function(nums, target) {
   let map = new Map; // used for fast lookup
   // key and value in Map can be in any data type, not limited to only string or integer.
   for (var i = 0; i < nums.length; i++) {
-      let complement = target - nums[i];
+      let complement = target - nums[i]; // return when target 
       // has checks if key is in map you can delete and clear and gt size
       if (map.has(complement)) {
           return [map.get(complement), i]
@@ -74,7 +74,7 @@ var twoSum = function(nums, target) {
   }
 }
 
-console.log(twoSum(Mynum,Mytarget));
+console.log(twoSum([1, 2, 3, 4, 6], 6));
 
 //ways to itrate map 
 
