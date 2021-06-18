@@ -12,8 +12,10 @@ class Node {
       this.length = 0;
     }
     peek() {
-      return this.first;
+      return console.log(this.first)
     }
+
+    // same as push 
     enqueue(value){
       const newNode = new Node(value);
       if (this.length === 0) {
@@ -26,6 +28,8 @@ class Node {
       this.length++;
       return this;
     }
+
+    // like pop but removes the first objects in the queue 
     dequeue(){
       if (!this.first) {
         return null;
@@ -43,8 +47,9 @@ class Node {
   
   const myQueue = new Queue();
   myQueue.peek();
-  myQueue.enqueue('Joy');
+  myQueue.enqueue('Joy'); // always will show in peek since first
   myQueue.enqueue('Matt');
+  myQueue.peek();
   myQueue.enqueue('Pavel');
   myQueue.peek();
   myQueue.dequeue();

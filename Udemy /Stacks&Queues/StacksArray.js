@@ -4,7 +4,7 @@
       this.array = [];
     }
     peek() {
-      return this.array[this.array.length-1];
+      return console.log(this.array[this.array.length-1])
     }
     push(value){
       this.array.push(value);
@@ -20,7 +20,9 @@
   myStack.peek();
   myStack.push('google');
   myStack.push('udemy');
-  myStack.push('discord');
+  myStack.peek();
+
+  // myStack.push('discord');
   myStack.peek();
   myStack.pop();
   myStack.pop();
