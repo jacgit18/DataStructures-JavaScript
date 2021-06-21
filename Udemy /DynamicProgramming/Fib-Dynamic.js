@@ -1,12 +1,12 @@
 //0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233...
 let calculations = 0;
-function fibonacci(n) { //O(2^n)
+// function fibonacci(n) { //O(2^n)
   
-  if (n < 2) {
-    return n
-  }
-  return fibonacci(n-1) + fibonacci(n-2);
-}
+//   if (n < 2) {
+//     return n
+//   }
+//   return fibonacci(n-1) + fibonacci(n-2);
+// }
 
 function fibonacciMaster() { //O(n)
   let cache = {};
@@ -35,8 +35,8 @@ function fibonacciMaster2(n) {
 
 const fasterFib = fibonacciMaster();
 
-console.log('Slow', fibonacci(35))
-console.log('DP', fasterFib(100));
+// console.log('Slow', fibonacci(35))
+console.log('DP', fasterFib(10));
 console.log('DP2', fibonacciMaster2(100));
 console.log('we did ' + calculations + ' calculations');
 
