@@ -13,8 +13,10 @@ function reverseString(str) {
     addToArray(arrayStr);
     return reversedArray.join("");
   }
-  
-  reverseString('yoyo master');
+ 
+
+  console.log(reverseString('yoyo master'));
+
   
   function reverseStringRecursive (str) {
     if (str === "") {
