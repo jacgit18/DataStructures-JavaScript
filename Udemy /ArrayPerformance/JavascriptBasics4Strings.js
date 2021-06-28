@@ -102,7 +102,7 @@ class MyString {
    */
   Mymatch = () => {
     var intRegex = /[0-9 -()+]+$/;
-    var myNumber = "999";
+    var myNumber = "9";
     var myInt = myNumber.match(intRegex);
    
   };
@@ -177,7 +177,7 @@ class MyString {
 
   MysubstringFrom = () => {
     var myString = "javascript rox";
-    myString = myString.substring(0, 10);
+    myString = myString.substring(0, 1);
     console.log(myString);
   };
 
@@ -199,18 +199,19 @@ const stringer = new MyString();
 // stringer.MycharCodeAt();
 // stringer.MyendCheck();
 // stringer.Myconcate();
-stringer.MyfromCharCode();
-stringer.MylastIndexOf();
-stringer.Mymatch();
+// stringer.MyfromCharCode();
+// stringer.MyindexOf();
+// stringer.MylastIndexOf();
+// stringer.Mymatch();
 
 // let sentence = "This is the BEST";
 // sentence.matchAll("e").forEach((ele) => {
 //   console.log(ele);
 // });
 
-stringer.MystringSearch();
-stringer.Myslice();
-stringer.Mysplit();
+// stringer.MystringSearch();
+// stringer.Myslice();
+// stringer.Mysplit();
 stringer.MysubstringStarter();
 stringer.MysubstringFrom();
 stringer.Myconcate();
